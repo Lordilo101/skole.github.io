@@ -1,0 +1,547 @@
+
+body.svartS{ /*dette bytter på body tagens "common" regler når svartS( darkmode) er aktivert*/
+  background-color: rgb(43, 39, 39);
+  color: #ececec;
+}
+
+.asdas{ 
+  font-size: 90px; text-align: center;
+}
+
+
+.linkse{  /*desing til baren på toppen og det som sikrer at den er riktig plassert og har en skygge*/
+  background-color: #1b1b1b;
+  width: 100%;
+  height: 50px;
+  opacity: 100%;
+  z-index: 10000;
+  text-align: right;
+  font-size: 20px;
+  margin-bottom: -0px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.ASsd{
+  margin-right: 70px; /*alt dette med ASsd er med linkene inni baren på toppen og gjøre og alt under her er vist du hovrer/ klikker på dem*/
+}
+.ASsd:link{
+  color:rgb(241, 179, 73)
+}
+.ASsd:visited {
+  color: rgb(219, 218, 218);
+}
+.ASsd:hover {
+  color: rgb(247, 156, 19);
+}
+.ASsd:active {
+  color: rgb(255, 255, 255);
+}
+.spacer { /* bare for og lage plass og ha et sted og putte haikei*/
+  width:100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.layer1{
+  background-image: url(haikei/Hvitback.svg);
+}  /*dette er bildene til bakgrunnen på titlen til hjemmesiden*/
+.svartS .layer1 {
+  background-image: url(haikei/svarback.svg);
+} /* og dette er for titlens skift osv*/
+.text_Overskrift{ 
+  background-image: linear-gradient(60deg, rgb(252, 172, 53), rgb(255, 42, 42));
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size:6vw;
+  font-family: Bungee Shade;
+  text-align: center;
+  padding-top: 180px;
+}
+/*****************************************************************************************************************************************************/
+/*alt underher og neste "linje seperator" er med oppg og qrkode på hjemmesiden og gjøre og fade inn teksten******************************************************************************************************************/
+/*****************************************************************************************************************************************************/
+.oppg{
+  /* Bakgrunnsbilde og størrelse */
+  background-image: url(haikei/Midtenhvit.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  /* Plassering og størrelse */
+  width: 100%;
+  height: 1500px;
+  margin-top: -80px;
+
+}
+
+/* Endrer bakgrunnsbilde for mørkt tema */
+.svartS .oppg{
+  background-image: url(haikei/midten.svg);
+}
+
+/* Stil for bilde med ramme */
+.qrbilde{
+  border-radius: 20px;
+  border-width: 10px;
+  border-color: coral;
+  border-style: solid; 
+  margin-left: 100px;
+}
+
+
+
+.section {
+  /* Setter opp et grid og plasserer innholdet til venstre, og sørger for å sentrere innholdet vertikalt */
+  display: grid;
+  place-items: left;
+  align-content: center;
+  /* Setter minimum høyde til 100vh og legger til en margin på venstre side */
+  min-height: 100vh;
+  margin-left:100px;
+  /* Setter fontstørrelsen til 60px */
+  font-size: 60px;
+}
+
+/* Styler et element med id 'undera' */
+#undera{
+  /* Reduserer fontstørrelsen, endrer margen og legger elementet bakgrunnen */
+  font-size: 40px;
+  margin-top:-5px;
+  margin-bottom:2cm;
+  z-index: -100;
+}
+
+/* Styler et element med klassen 'hidden' */
+.hidden {
+  /* Skjuler elementet ved å sette opacity til 0, legger til blur-effekt og flytter elementet utenfor skjermen. Setter en transition på 1 sekund for å skape en animasjon */
+  opacity: 0;
+  filter:blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.show { /*dette er selve den som HIDDEN blir byttet ut med og er derfor den du må skifte på vist du vil skifte på hvordan animasjonene på den "flyvende teksten"*/
+  filter: blur(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+#bildehva {
+  /* stil for QR-kodebilde */
+  border: 10px solid #e0703b;
+  border-radius: 20px;
+  display: block;
+  margin-left: 60%;
+  margin-right: auto;
+  margin-top: -240px;
+}
+
+.qrside {
+  /* stil for QR-kodesiden */
+  width: 100%;
+  height: 500px;
+}
+
+#teekstqqr {
+  /* stil for tekst på QR-kodesiden */
+  font-size: 30px;
+  margin-left: 200px;
+}
+
+#venstreqr {
+  /* stil for venstre QR-kode på siden */
+  font-size: 30px;
+  margin-left: 500px;
+  margin-bottom: -100px;
+  margin-top: 100px;
+}
+/*****************************************************************************************************************************************************/
+/*alt under her og neste blokk er i Treningsapp, ******************************************************************************************************************/
+/*****************************************************************************************************************************************************/
+/* Bruker flexbox for å plassere elementene sentrert horisontalt og med mellomrom mellom dem */
+.flex-container {
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+}
+
+/* Definerer stil for hvert enkelt element innenfor flex-containeren */
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+}
+
+/* Definerer stil for kort-elementet */
+.trengclass{
+  background-color: #f0edeb;
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-align: center;
+  transition-property: all; /* Definerer at alle egenskaper skal animere */
+  transition-duration: 0.5s; /* Definerer animasjonsvarigheten */
+  align-self: center;
+  text-decoration: none;
+  color:#131212;
+  font-size: 30px;
+  margin: 20px;
+}
+
+/* Definerer hva som skjer når kort-elementet hoveres over med musepekeren */
+.trengclass:hover{
+  background-color: #e4e0e0;
+  width: 420px;
+  height: 520px;
+}
+
+/* Definerer stil for kort-elementets tittel */
+#korttitle{
+  text-align: center;
+  color:#f37e2f;
+  font-size: 50px;
+}
+
+/* Definerer stil for kort-elementets bilde */
+.kortbilder{
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+/* Definerer hva som skjer når kort-elementets bilde hoveres over med musepekeren */
+.kortbilder:hover{
+  width: 600px; /* Øker bredden på bildet */
+  margin-left: -1000px; /* Flytter bildet mot venstre for å skape en illusjon av zooming */
+}
+
+/*****************************************************************************************************************************************************/
+/*alt under her har spesefikt med Linker og gjøre*****************************************************************************************************************/
+/*****************************************************************************************************************************************************/
+/* Setter bakgrunnsbilde og justerer størrelse og gjentakelse */
+.Linkmain{
+  width: 100%;
+  height: 900px;
+  background-image: url(haikei/hvitlink.svg);
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+
+/* Endrer bakgrunnsbilde når elementet har klassen "svartS" */
+.svartS .Linkmain{
+  background-image: url(haikei/svartlink.svg);
+}
+
+/* Justerer venstre margin for element med klassen "lmain" */
+.lmain{
+  margin-left: 100px;
+}
+
+/* Justerer venstre margin og skriftstørrelse for element med klassen "llink",
+   og endrer tekstfarge for ulike tilstander */
+.llink{
+  margin-left: 100px;
+  font-size:50px;
+}
+
+.llink:link{
+  color: #f5be80;
+}
+/*dette r for vist linkene har*/
+.llink:visited {
+  color: rgb(77, 75, 73);
+}
+
+.llink:hover{
+  color: #f37e2f;
+}
+
+/*****************************************************************************************************************************************************/
+/*alr under her er med om oss og gjøre*****************************************************************************************************************/
+/*****************************************************************************************************************************************************/
+/* Bakgrunnsbildet for siden */
+.omossma{
+  width: 100%; /* Fyller hele bredden av foreldreelementet */
+  height: 1500px; /* Setter høyden på elementet */
+  background-image: url(haikei/lowomoss.svg); /* Angir URL til bakgrunnsbildet */
+  margin-top: -30px; /* Flytter elementet 30 piksler oppover */
+  background-repeat: no-repeat; /* Forhindrer gjentakelse av bakgrunnsbildet */
+  background-size: cover; /* Skalerer bakgrunnsbildet for å fylle elementet proporsjonalt */
+}
+
+/* Det øverste informasjonskortet */
+.infos{
+  background-color: #ffffff; /* Setter bakgrunnsfargen til hvit */
+  z-index: 10; /* Setter stabel-rekkefølgen til elementet */
+  height: 400px; /* Setter høyden på elementet */
+  width: 800px; /* Setter bredden på elementet */
+  padding: 20px; /* Legger til polstring rundt innholdet */
+  margin-bottom: -200px; /* Flytter elementet 200 piksler oppover i forhold til sin opprinnelige posisjon */
+  margin-left: auto; /* Sentrerer elementet horisontalt */
+  margin-right: 20px; /* Setter en margin på 20 piksler på høyre side */
+  border-radius: 20px; /* Setter avrundede hjørner på elementet */
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; /* Legger til en subtil skyggeeffekt */
+}
+
+/* Det nederste informasjonskortet */
+.infos1{
+  background-color: #ffffff; /* Setter bakgrunnsfargen til hvit */
+  z-index: 10; /* Setter stabel-rekkefølgen til elementet */
+  height: 400px; /* Setter høyden på elementet */
+  width: 800px; /* Setter bredden på elementet */
+  padding: 10px; /* Legger til polstring rundt innholdet */
+  margin-top: 70px; /* Flytter elementet 70 piksler nedover i forhold til sin opprinnelige posisjon */
+  margin-right: auto; /* Sentrerer elementet horisontalt */
+  margin-left: auto; /* Sentrerer elementet horisontalt */
+  border-radius: 20px; /* Setter avrundede hjørner på elementet */
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; /* Legger til en subtil skyggeeffekt */
+}
+
+/* Teksten i det øverste informasjonskortet */
+.ptekstom{
+  font-size: 30px; /* Setter fontstørrelsen på teksten */
+}
+
+/* Kortet som inneholder bildene av personer */
+
+
+.omossbil{  /* bare settings for selv ebilde i omossw delen border*/
+  width: 800px; 
+  margin-left: 30px;
+  border-radius: 20px; 
+  border-width: 5px;
+  border-style: solid;
+  border-color: aliceblue;
+  margin-top: 230px;
+}
+
+
+
+/*****************************************************************************************************************************************************/
+/*alt under her har mede forksjelige trenings og treningsøkt sidene*****************************************************************************************************************/
+/*****************************************************************************************************************************************************/
+.treningsforhjem{ /* alt mellom header og footern er dette det er derfor den er å høy og bred det er den som også har flex elementene inni seg*/
+  display: flex;
+  height: 1100px;
+  width: 100%;
+  justify-content: center;
+  border-radius: 20;
+  border-width:  20px 0 0 0;
+}
+.bildee{ /* dette er design of størrelse for selve bildene inni blokkkene*/
+  width: 550px;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.knapvild{ /* design og posjisjonering av knappen under bildene*/
+  border-radius: 6px 6px 6PX 6px;
+  margin-left: 35%;
+  padding: 20px;
+  font-size: 20px;
+}
+.knapvild:hover{ /*når du hovrer over den så skiftest alt med dette */
+  border-radius: 6px 6px 6PX 6px;
+  background-color: #d2cfcf;
+  padding: 22px;
+  font-size: 22px;
+  transition-property:all;
+  transition-duration: 0.5s;
+}
+.sitechanger{  /* den div tagen som har kanppen og bildet inni seg bare for og holde kold på begge*/
+  width: 550px;
+  height: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff9500;
+  box-shadow: rgba(255, 132, 0, 0.4) -5px 5px, rgba(255, 132, 0, 0.3) -10px 10px, rgba(255, 132, 0, 0.2) -15px 15px, rgba(255, 132, 0, 0.1) -20px 20px, rgba(255, 132, 0, 0.05) -25px 25px;
+
+}
+
+
+.trenrader{ /* dette er for selve de 2( der bildene og teksten beholder seg ) dette er for og transfromere høyden og bredden og skyggen*/
+  width: 800px;
+  border-radius: 30px;
+  margin: 30px;
+  background-color: rgb(241, 235, 235);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.tilbakes{ /* til tilbake knappen og teksten over det er pretty much en div tag som passer på at knappen og teksten holder seg på plass og har en fet bakgrunn*/
+  text-align: center;
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  background-image: url(haikei/layered-steps-haikei.svg);
+  height: 180px;
+}
+.ie{ /*SELVE tilbake knappen*/
+  text-decoration: none; 
+  background-color: aliceblue; 
+  padding: 16px;
+   border-radius: 20px; 
+   color: black;
+}
+
+.ie:hover{  /* samme bare når hovver*/
+  padding: 20px ;
+  background-color: rgb(216, 226, 234);
+}
+
+/*****************************************************************************************************************************************************/
+/*alt under her og neste "line seperator er med" dropdown menyen og gjøre -- enten om det er med dark fetueren eller design*****************************************************************************************************************/
+/*****************************************************************************************************************************************************/
+.nav-open .nav {
+  transform: translateX(0);
+
+}
+/* animasjons*/
+.nav-open .main {
+  transform: translateX(226px);
+  position: fixed;
+}
+
+.nav { /* abselut hele navigasjons ""blokken så dette er vikgtig for animasjonen og fargen*/
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: hsl(0, 0%, 100%);
+  transform: translateX(-350px);
+  transition: transform 0.2s;
+  z-index: 3;
+}
+
+.nav-close { /* for og kunne close nav baren*/
+  background: none;
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 15px 25px;
+  color: #ececec;
+  margin-left: auto;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.nav-links-container { /*skyggen unbder logoen*/
+  box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav__link { /*til de forskjellige firkantene både farge størrelse og posisjonering*/
+  width:300px;
+  height:7vh; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  text-decoration: none;
+  color: #e0703b;
+  border-style:none;
+  transition-property:all;
+  transition-duration: 1s;
+}
+.nav__link:hover { /* når du hovrer over en av "firkantene transormeres den med dette"*/
+margin-left:100px;
+background-color:rgb(211, 212, 208);
+border-style:ridge;
+padding-top:20px;
+padding-bottom:20px;
+}
+.nav__text { /* teksten inni selve nav baren*/
+  font-size: 24px;
+  font-family: 'Advent Pro';
+  font-weight: 50;
+}
+
+
+.main { /* dette er til knappen og sikrer at den har en animasjon*/
+  transition: transform 0.2s;
+  z-index:100 ;
+}
+
+.btn { /* til knappen oppe i venstre bare generelt plasserin og design*/
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 11px 11px;
+  font-size: 16px;
+  cursor: pointer;
+  position: fixed;
+  border-radius:10px;
+  margin-top:-30px;
+  margin-left:10px;
+  z-index: 4;
+}
+
+@media screen and (max-width: 480px) {  /* dette er for vist screenen er mindre en 480px vid "tlf" skal button skyves ned */
+  .btn {
+    margin-top:70px;
+  }
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color:#d1c6c6;
+  padding:14px 14px;
+}
+/*dette er for når du åpner menyen skal kanppen roteres*/
+.nav-open .btn{
+  -ms-transform: rotate(0deg); /* IE 9 */
+  transform: rotate(90deg);
+  width:65px;
+  margin-left:9px;
+
+}
+.icon{ /*generalt alle iconene størellse*/
+  font-size:30px;
+}
+
+.Bsvart{ /*dark mode kanppen design*/
+  margin-left:135px;
+  border:none;
+  font-size:60px;
+  margin-top:100px;
+  background-color: hsl(0, 0%, 100%)
+}
+
+.Bsvart:hover{ /*når du hovrer over knappene*/
+  font-size:70px;
+}
+
+.svartS .nav, .svartS .Bsvart {
+  background-color:rgb(43, 39, 39) ;
+  color:white;
+}
+
+/*****************************************************************************************************************************************************/
+/*alt under her er til FOT a.k.a footer****************************************************************************************************************/
+/*****************************************************************************************************************************************************/
+/*dette er for selve "boksen som er svart" alt koden gjør er at den sier hvor stor selve boksen og div tagen skal være*/
+.FOT{ 
+  background-color: #131212;
+  width: 100%;
+  height: 200px;
+  position: static;
+  box-shadow: 0 -20px 10px rgba(0, 0, 0, 0.25);
+  margin-top: -32px;
+}
+/*dette er for og få samme tekst som ejg har i "titlen" og for og gjøre den riktig størelse osv*/
+#Htekst{ 
+  color:#ee7525;
+  font-size:xx-large;
+  font-family: Bungee Shade;
+  margin-bottom: -10px;
+  margin-left: 100px;
+}
+/*dette er for alle linkene som linker til de forksjelige sidene jeg har bare farge tørelse og plassering*/
+.fotli{
+  color:white;
+  font-size:40px;
+  padding-right: 20px;
+  padding-left:20px;
+}
+ 

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="nor">
+ <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" /> <!-- "connecter" de to filene sammen-->
+    <script defer src="minJs.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  <!-- denne linjen samt med den under, er hva som flexbox bruekr til og kunne få til sin stiling, så jeg har bare tat disse, hva de hjør er at de lager definisjoner / preperar at siden skal være compateble / hvordan siden skal regne ut hvordan den skal se ut.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viken.prosjekt</title> <!--tittle-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/4a971abfc3.js" crossorigin="anonymous"></script>
+    <!--alt under her er linker til google font-->
+    <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
+
+
+<style>
+
+
+body.svartS{   /*denne er her bare fordi eller forsvinner teksten*/
+  color: #000000;
+}
+
+/*****************************************************************************************************************************************************/
+/*hvorfor ejg har en style section inni html er og gjøre det simpelt alt innen denne style delen har med @medie og gjøre og relatert til mobile view******************************************************************************************************************/
+/*****************************************************************************************************************************************************/
+@media screen and (max-width: 480px) {  /* dette er for vist screenen er mindre en 480px vid "tlf" skal button skyves ned */
+.btn {
+  margin-top:-70px; /* Flytter elementet 70 piksler oppover i forhold til der det vanligvis ville vært */
+}
+.treningsforhjem{
+  flex-direction: column; /* Setter hovedretningen til kolonne */
+  margin-top: 800px; /* Legger til 700 piksler på toppen av elementet */
+  margin-bottom: 800px; /* Legger til 700 piksler nederst på elementet */
+}
+.trenrader{
+  width: 90%; /* Setter bredden til 90% av foreldreelementet */
+  height: 10000px; /* Setter høyden til 10000 piksler */
+}
+.bildee{
+  width: 300px; /* Setter bredden til 300 piksler */
+  height: 300px; /* Setter høyden til 300 piksler */
+}
+.sitechanger{
+  width: 300px; /* Setter bredden til 300 piksler */
+}
+.asdas{
+  font-size: 70px; /* Setter fontstørrelsen til 70 piksler */
+  text-align: center; /* Sentrerer teksten horisontalt */
+}
+
+}
+
+/*alt under her er brukt i alle "har puttet dem ehr for at det skal være lett*/
+@media screen and (max-width: 800px) {  /* dette er for vist screenen er mindre en 480px vid "tlf" skal button skyves ned */
+.ASsd{
+  margin-right: 30px; /* gir margin til høyre */
+}
+
+.linkse{
+  height:80px; /* setter høyden til 80 piksler */
+  text-align: center; /* sentrerer teksten */
+}
+
+.fotli{
+  font-size: 20px; /* setter fontstørrelse til 20 piksler */
+}
+}
+
+
+</style>
+
+</head>
+
+<body style=" margin:0;margin-top:-0px; font-family: 'Advent Pro'; background-image: url(haikei/low-poly-grid-haikei.svg);  background-size: 100% 100%;">
+  <div class="linkse"> <!-- dette her og de linjene inni div tagen er bare linker til alle de "viktige sidene" dette er for den svarte baren på toppen-->
+    <a class="ASsd" href="index.html" target="_blank" >Hjem</a>
+    <a class="ASsd" href="Treningsapp.HTML" target="_blank">Øvelser</a>
+    <a class="ASsd" href="omoss.html" target="_blank">Om oss</a>
+
+  </div>
+
+  <main class="main"> <!--dette her er bare for knappen som hovrer oppe til venstre og som når du klikker på åpner menyen. java til og få det til-->
+    <button class="btn"onclick="toggleNa()"><i class="fa-solid fa-bars" style="font-size:40px;" ></i></button>
+  </main>
+  <div class="tilbakes"><h1 style="font-size:50px; text-align: center; ">Skuldre og Biceps</h1>
+<a href="Treningsapp.HTML" class="ie">Tilbake?</a></div> <!-- dette er bare en link som sender deg tilbake til forje siden(den har style tag i seg for og ikke gjøre det så kaotisk i CSS)-->
+
+
+<div class="treningsforhjem">
+
+<!--alt under i klumpen er det samme det som de andre det er bare et bilde og en knapp med tekst under knappen sender en "meldning" til javaen på bunden og javaen sier at bidlet skal skiftest-->
+<div class="trenrader hidden">
+<!--dette er et bilde med id mitbilde-->
+<h1 class="asdas">Chestpress</h1>
+<div class="sitechanger ">
+<img id="mitbilde" class="bildee" src="ApperaterBil\chespre (2).JPG" alt="Visning av Chestpress Maskin og bruk av Maskinen" >
+<button class="knapvild" onclick="skiftknapp()"> Neste Bilde</button>
+</div>
+<p style=" font-size: 40px; text-align: center;">Sittende chest press er en styrketreningsøvelse som fokuserer på å styrke brystmusklene og overkroppen.</p><hr>
+  <p style="font-size:25px; text-align: center;" >Øvelsen utføres ved å sitte på en spesiell maskin, kalt "chest press machine", med ryggen mot ryggstøtten og hendene på håndtakene. Deretter presser man håndtakene fremover. </p>
+</div>
+
+<!--alt under i klumpen er det samme det som de andre det er bare et bilde og en knapp med tekst under knappen sender en "meldning" til javaen på bunden og javaen sier at bidlet skal skiftest-->
+<div class="trenrader hidden">
+<!--dette er et bilde med id mitbilde-->
+<h1 class="asdas">Shoulder press</h1>
+<div class="sitechanger ">
+<img id="mitbilde1" class="bildee" src="ApperaterBil\skulpre (2).JPG" alt="Vinsning av Shoulder press Maskin og bruk av Maskin">
+<button class="knapvild" onclick="skiftknapp1()"> Neste Bilde</button>
+</div>
+<p style=" font-size: 40px; text-align: center;">Shoulder press, også kjent som militærpress, er en styrketreningsøvelse som fokuserer på å styrke skuldrene og overkroppen.<p><hr>
+<p style="font-size:25px; text-align: center;"> Øvelsen utføres ved å sitte på en benk eller stå oppreist, og holde en vektstang eller manualer på skulderhøyde. Deretter presser man vektstangen eller manualene opp over hodet, til armene er strake. </p>
+</div>
+
+
+
+</div>
+
+
+
+<div class="FOT">  <!-- dette her er og det under er til footern og er veldig simpelt bare litt små tekst også noen linker til de "viktige sidene"-->
+<p id="Htekst">Stranda</p>
+  <hr>
+  <a class="fotli" href="index.html" target="_blank" >Hjem</a>
+  <a class="fotli" href="Treningsapp.HTML" target="_blank">Øvelser</a>
+  <a class="fotli" href="omoss.html" target="_blank">Om oss</a>
+  <p>...lagd av philip.O.Hovland...</p>
+  </div><!--slutten på footern btw-->
+  
+  <!-- alt under her har med navigasjons baren g gjøre. hvordan det funker er at alle disse delene er gjømt på utsiden av skjermen og når man klikker på knappen oppe til venstre skiftest posisjonen seg men en Transform tag som gjør så det blir "animert" det er derfor alt er "gjømt" her nede og det er dette du må redigere vist du har lyst til og redigere med navigasjons baren-->
+  <nav class="nav">
+        
+    <img class="Logo" width="234px" height="80px" src="/Bilder/Logo.png "alt="stranda logo"><!--logoen som er til venstre for knappen-->
+  
+  <div class="nav-links-container">
+  
+    <a href="index.html" class="nav__link"> <!-- skriver dette bare på den øverste siden alle de 4 under ahr det samme prinsippet. dette er selve linken og som du ser kan man redigere hvor den skal sende deg og med linjen under kan man skifte hvordan selve "boken og hva som står i boksen" sier / ser ut-->
+      <span class="nav__text">Hjemme side<i class="fa-solid fa-house" style="padding-left: 120px;" size="font-size: 30px;"></i></i></span>
+    </a>                                           <!-- <i> taggen trengs for iconsa-->
+  
+    <a href="Treningsapp.HTML" class="nav__link">
+      <span class="nav__text">Treningsapperater/Øvelser<i class="fa-solid fa-dumbbell icon" style="padding-left: 0px;"></i></span>
+    </a>
+  
+    <a href="linker.html" class="nav__link">
+      <span class="nav__text">Linker<i class="fa-solid fa-link abda icon" style="padding-left: 170px;"></i></span>
+    </a>
+    <a href="omoss.html" class="nav__link">
+      <span class="nav__text">Om oss<i class="fa-solid fa-user icon " style="padding-left: 150px;"></i></span>
+    </a>
+  <!-- linjen under er anderleders fordi det er den til Darkmode og derfor passet den ikke in som en egen link og jeg måte "designe den anderleders"-->
+    <button class="Bsvart " onclick="toggleBackground('body')"><i class="fa-regular fa-moon"></i> </button>
+  </div>
+  </nav>
+  
+  
+  <!-- SLUTT :D-->
+<!-- jeg har valgt og putte scripte / javaen til og skifte bilde på vær sin individuel fordi detr ville bli for kaotisk og ha alt inni JAVAscript-->
+<script>
+		var imageArray = ['ApperaterBil/chespre (2).JPG',"appegif/dytt.gif","ApperaterBil/chespre.JPG"];
+		var imageIndex = 0;
+
+		function skiftknapp() {
+			// Hent bildet med ID-en "mit bilde"
+			var image = document.getElementById('mitbilde');
+
+			// Bytt til neste bilde i arrayet
+			imageIndex++;
+			if (imageIndex >= imageArray.length) {
+				imageIndex = 0;
+			}
+
+			// Bytt til neste bildefil
+			image.src = imageArray[imageIndex];
+			image.alt = 'Bilde ' + (imageIndex + 1);
+		}
+
+
+		var imageArray1 = ['ApperaterBil/skulpre (2).JPG',"appegif/rygg.gif","ApperaterBil/skulpre.JPG"];
+		var imageIndex = 0;
+
+		function skiftknapp1() {
+			// Hent bildet med ID-en "mit bilde"
+			var image = document.getElementById('mitbilde1');
+
+			// Bytt til neste bilde i arrayet
+			imageIndex++;
+			if (imageIndex >= imageArray1.length) {
+				imageIndex = 0;
+			}
+
+			// Bytt til neste bildefil
+			image.src = imageArray1[imageIndex];
+			image.alt = 'Bilde ' + (imageIndex + 1);
+		}
+</script>
+</body>
+</html>
